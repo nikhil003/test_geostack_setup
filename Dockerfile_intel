@@ -1,0 +1,40 @@
+FROM ubuntu:20.04
+WORKDIR /app
+
+# Refresh and install packages
+RUN apt update
+RUN apt-get install -y wget
+
+RUN apt-get -qq update && apt-get -qq -y install curl bzip2 \
+    && curl -Ls https://micro.mamba.pm/api/micromamba/linux-64/latest | tar -xvj bin/micromamba \
+    && touch /root/.bashrc \
+    && ./bin/micromamba shell init -s bash -p /opt/conda  \
+    && grep -v '[ -z "\$PS1" ] && return' /root/.bashrc  > /opt/conda/bashrc   # this line has been modified \
+    && apt-get -qq -y remove curl bzip2 \
+    && apt-get -qq -y autoremove \
+    && apt-get autoclean \
+    && rm -rf /var/lib/apt/lists/* /var/log/dpkg.log
+
+SHELL ["bash", "-l" ,"-c"]
+
+# Refresh and install packages
+RUN apt update
+RUN apt-get install -y cpio ocl-icd-opencl-dev opencl-headers
+
+# Install Intel 18.1 OpenCL driver
+COPY Dockerfile_Intel_18.1.cfg .
+RUN wget https://registrationcenter-download.intel.com/akdlm/irc_nas/vcp/15532/l_opencl_p_18.1.0.015.tgz
+RUN tar xvfz ./l_opencl_p_18.1.0.015.tgz
+RUN ./l_opencl_p_18.1.0.015/install.sh -s ./Dockerfile_Intel_18.1.cfg
+RUN rm -rf ./l_opencl_p_18.1.0.015
+
+RUN ./bin/micromamba clean --all --yes
+
+RUN ./bin/micromamba create -n geostack -c conda-forge python=3.9
+RUN ./bin/micromamba install -n geostack -c conda-forge numpy
+RUN ./bin/micromamba install -n geostack -c geostack geostack
+
+# Container startup code
+COPY run.py .
+RUN /root/micromamba/envs/geostack/bin/python run.py
+# ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "geostack", "python", "run.py"]

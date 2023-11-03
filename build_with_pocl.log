@@ -1,0 +1,574 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.21kB done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:20.04
+#3 DONE 2.1s
+
+#4 [internal] load build context
+#4 transferring context: 1.73kB done
+#4 DONE 0.0s
+
+#5 [ 1/12] FROM docker.io/library/ubuntu:20.04@sha256:ed4a42283d9943135ed87d4ee34e542f7f5ad9ecf2f244870e23122f703f91c2
+#5 resolve docker.io/library/ubuntu:20.04@sha256:ed4a42283d9943135ed87d4ee34e542f7f5ad9ecf2f244870e23122f703f91c2 done
+#5 sha256:218bb51abbd1864df8be26166f847547b3851a89999ca7bfceb85ca9b5d2e95d 424B / 424B done
+#5 sha256:bf40b7bc7a11b43785755d3c5f23dee03b08e988b327a2f10b22d01d5dc5259d 2.30kB / 2.30kB done
+#5 sha256:96d54c3075c9eeaed5561fd620828fd6bb5d80ecae7cb25f9ba5f7d88ea6e15c 0B / 27.51MB 0.1s
+#5 sha256:ed4a42283d9943135ed87d4ee34e542f7f5ad9ecf2f244870e23122f703f91c2 1.13kB / 1.13kB done
+#5 sha256:96d54c3075c9eeaed5561fd620828fd6bb5d80ecae7cb25f9ba5f7d88ea6e15c 3.15MB / 27.51MB 0.7s
+#5 sha256:96d54c3075c9eeaed5561fd620828fd6bb5d80ecae7cb25f9ba5f7d88ea6e15c 5.24MB / 27.51MB 1.0s
+#5 sha256:96d54c3075c9eeaed5561fd620828fd6bb5d80ecae7cb25f9ba5f7d88ea6e15c 9.44MB / 27.51MB 1.4s
+#5 sha256:96d54c3075c9eeaed5561fd620828fd6bb5d80ecae7cb25f9ba5f7d88ea6e15c 12.58MB / 27.51MB 1.7s
+#5 sha256:96d54c3075c9eeaed5561fd620828fd6bb5d80ecae7cb25f9ba5f7d88ea6e15c 16.78MB / 27.51MB 2.0s
+#5 sha256:96d54c3075c9eeaed5561fd620828fd6bb5d80ecae7cb25f9ba5f7d88ea6e15c 18.87MB / 27.51MB 2.2s
+#5 sha256:96d54c3075c9eeaed5561fd620828fd6bb5d80ecae7cb25f9ba5f7d88ea6e15c 20.97MB / 27.51MB 2.3s
+#5 sha256:96d54c3075c9eeaed5561fd620828fd6bb5d80ecae7cb25f9ba5f7d88ea6e15c 23.07MB / 27.51MB 2.5s
+#5 sha256:96d54c3075c9eeaed5561fd620828fd6bb5d80ecae7cb25f9ba5f7d88ea6e15c 26.21MB / 27.51MB 2.8s
+#5 sha256:96d54c3075c9eeaed5561fd620828fd6bb5d80ecae7cb25f9ba5f7d88ea6e15c 27.51MB / 27.51MB 2.8s done
+#5 extracting sha256:96d54c3075c9eeaed5561fd620828fd6bb5d80ecae7cb25f9ba5f7d88ea6e15c
+#5 extracting sha256:96d54c3075c9eeaed5561fd620828fd6bb5d80ecae7cb25f9ba5f7d88ea6e15c 0.5s done
+#5 DONE 3.5s
+
+#6 [ 2/12] WORKDIR /app
+#6 DONE 0.1s
+
+#7 [ 3/12] RUN apt update
+#7 0.091 
+#7 0.091 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+#7 0.091 
+#7 0.863 Get:1 http://archive.ubuntu.com/ubuntu focal InRelease [265 kB]
+#7 1.135 Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+#7 2.206 Get:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+#7 2.516 Get:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+#7 2.517 Get:5 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [3189 kB]
+#7 2.827 Get:6 http://archive.ubuntu.com/ubuntu focal/restricted amd64 Packages [33.4 kB]
+#7 2.854 Get:7 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages [11.3 MB]
+#7 5.553 Get:8 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [29.3 kB]
+#7 5.553 Get:9 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [3017 kB]
+#7 6.064 Get:10 http://archive.ubuntu.com/ubuntu focal/main amd64 Packages [1275 kB]
+#7 6.774 Get:11 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [177 kB]
+#7 6.828 Get:12 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [3167 kB]
+#7 6.999 Get:13 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [1127 kB]
+#7 7.261 Get:14 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [32.1 kB]
+#7 7.261 Get:15 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1431 kB]
+#7 8.090 Get:16 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [3677 kB]
+#7 8.796 Get:17 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [55.2 kB]
+#7 8.807 Get:18 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [28.6 kB]
+#7 9.599 Fetched 29.2 MB in 9s (3074 kB/s)
+#7 9.599 Reading package lists...
+#7 10.44 Building dependency tree...
+#7 10.58 Reading state information...
+#7 10.58 All packages are up to date.
+#7 DONE 10.6s
+
+#8 [ 4/12] RUN apt-get install -y wget
+#8 0.132 Reading package lists...
+#8 0.918 Building dependency tree...
+#8 1.049 Reading state information...
+#8 1.165 The following additional packages will be installed:
+#8 1.165   ca-certificates libpsl5 libssl1.1 openssl publicsuffix
+#8 1.196 The following NEW packages will be installed:
+#8 1.197   ca-certificates libpsl5 libssl1.1 openssl publicsuffix wget
+#8 1.814 0 upgraded, 6 newly installed, 0 to remove and 0 not upgraded.
+#8 1.814 Need to get 2604 kB of archives.
+#8 1.814 After this operation, 7233 kB of additional disk space will be used.
+#8 1.814 Get:1 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libssl1.1 amd64 1.1.1f-1ubuntu2.20 [1321 kB]
+#8 4.487 Get:2 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 openssl amd64 1.1.1f-1ubuntu2.20 [620 kB]
+#8 4.619 Get:3 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 ca-certificates all 20230311ubuntu0.20.04.1 [152 kB]
+#8 4.650 Get:4 http://archive.ubuntu.com/ubuntu focal/main amd64 libpsl5 amd64 0.21.0-1ubuntu1 [51.5 kB]
+#8 4.663 Get:5 http://archive.ubuntu.com/ubuntu focal/main amd64 publicsuffix all 20200303.0012-1 [111 kB]
+#8 4.687 Get:6 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 wget amd64 1.20.3-1ubuntu2 [348 kB]
+#8 4.950 debconf: delaying package configuration, since apt-utils is not installed
+#8 4.968 Fetched 2604 kB in 4s (710 kB/s)
+#8 4.995 Selecting previously unselected package libssl1.1:amd64.
+#8 4.995 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4126 files and directories currently installed.)
+#8 4.997 Preparing to unpack .../0-libssl1.1_1.1.1f-1ubuntu2.20_amd64.deb ...
+#8 5.008 Unpacking libssl1.1:amd64 (1.1.1f-1ubuntu2.20) ...
+#8 5.119 Selecting previously unselected package openssl.
+#8 5.119 Preparing to unpack .../1-openssl_1.1.1f-1ubuntu2.20_amd64.deb ...
+#8 5.125 Unpacking openssl (1.1.1f-1ubuntu2.20) ...
+#8 5.199 Selecting previously unselected package ca-certificates.
+#8 5.199 Preparing to unpack .../2-ca-certificates_20230311ubuntu0.20.04.1_all.deb ...
+#8 5.201 Unpacking ca-certificates (20230311ubuntu0.20.04.1) ...
+#8 5.234 Selecting previously unselected package libpsl5:amd64.
+#8 5.235 Preparing to unpack .../3-libpsl5_0.21.0-1ubuntu1_amd64.deb ...
+#8 5.236 Unpacking libpsl5:amd64 (0.21.0-1ubuntu1) ...
+#8 5.259 Selecting previously unselected package publicsuffix.
+#8 5.260 Preparing to unpack .../4-publicsuffix_20200303.0012-1_all.deb ...
+#8 5.262 Unpacking publicsuffix (20200303.0012-1) ...
+#8 5.287 Selecting previously unselected package wget.
+#8 5.288 Preparing to unpack .../5-wget_1.20.3-1ubuntu2_amd64.deb ...
+#8 5.292 Unpacking wget (1.20.3-1ubuntu2) ...
+#8 5.334 Setting up libpsl5:amd64 (0.21.0-1ubuntu1) ...
+#8 5.343 Setting up libssl1.1:amd64 (1.1.1f-1ubuntu2.20) ...
+#8 5.400 debconf: unable to initialize frontend: Dialog
+#8 5.400 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#8 5.400 debconf: falling back to frontend: Readline
+#8 5.400 debconf: unable to initialize frontend: Readline
+#8 5.400 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.30.0 /usr/local/share/perl/5.30.0 /usr/lib/x86_64-linux-gnu/perl5/5.30 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.30 /usr/share/perl/5.30 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+#8 5.400 debconf: falling back to frontend: Teletype
+#8 5.423 Setting up openssl (1.1.1f-1ubuntu2.20) ...
+#8 5.430 Setting up publicsuffix (20200303.0012-1) ...
+#8 5.436 Setting up wget (1.20.3-1ubuntu2) ...
+#8 5.443 Setting up ca-certificates (20230311ubuntu0.20.04.1) ...
+#8 5.503 debconf: unable to initialize frontend: Dialog
+#8 5.503 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#8 5.503 debconf: falling back to frontend: Readline
+#8 5.503 debconf: unable to initialize frontend: Readline
+#8 5.503 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.30.0 /usr/local/share/perl/5.30.0 /usr/lib/x86_64-linux-gnu/perl5/5.30 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.30 /usr/share/perl/5.30 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+#8 5.503 debconf: falling back to frontend: Teletype
+#8 5.732 Updating certificates in /etc/ssl/certs...
+#8 6.069 137 added, 0 removed; done.
+#8 6.090 Processing triggers for libc-bin (2.31-0ubuntu9.12) ...
+#8 6.101 Processing triggers for ca-certificates (20230311ubuntu0.20.04.1) ...
+#8 6.105 Updating certificates in /etc/ssl/certs...
+#8 6.368 0 added, 0 removed; done.
+#8 6.368 Running hooks in /etc/ca-certificates/update.d...
+#8 6.369 done.
+#8 DONE 6.4s
+
+#9 [ 5/12] RUN apt-get -qq update && apt-get -qq -y install curl bzip2     && curl -Ls https://micro.mamba.pm/api/micromamba/linux-64/latest | tar -xvj bin/micromamba     && touch /root/.bashrc     && ./bin/micromamba shell init -s bash -p /opt/conda      && grep -v '[ -z "\$PS1" ] && return' /root/.bashrc  > /opt/conda/bashrc   # this line has been modified     && apt-get -qq -y remove curl bzip2     && apt-get -qq -y autoremove     && apt-get autoclean     && rm -rf /var/lib/apt/lists/* /var/log/dpkg.log
+#9 11.85 debconf: delaying package configuration, since apt-utils is not installed
+#9 11.88 Selecting previously unselected package libsqlite3-0:amd64.
+#9 11.88 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4478 files and directories currently installed.)
+#9 11.89 Preparing to unpack .../00-libsqlite3-0_3.31.1-4ubuntu0.5_amd64.deb ...
+#9 11.89 Unpacking libsqlite3-0:amd64 (3.31.1-4ubuntu0.5) ...
+#9 11.94 Selecting previously unselected package krb5-locales.
+#9 11.94 Preparing to unpack .../01-krb5-locales_1.17-6ubuntu4.3_all.deb ...
+#9 11.94 Unpacking krb5-locales (1.17-6ubuntu4.3) ...
+#9 11.96 Selecting previously unselected package libkrb5support0:amd64.
+#9 11.96 Preparing to unpack .../02-libkrb5support0_1.17-6ubuntu4.3_amd64.deb ...
+#9 11.96 Unpacking libkrb5support0:amd64 (1.17-6ubuntu4.3) ...
+#9 11.97 Selecting previously unselected package libk5crypto3:amd64.
+#9 11.98 Preparing to unpack .../03-libk5crypto3_1.17-6ubuntu4.3_amd64.deb ...
+#9 11.98 Unpacking libk5crypto3:amd64 (1.17-6ubuntu4.3) ...
+#9 12.00 Selecting previously unselected package libkeyutils1:amd64.
+#9 12.00 Preparing to unpack .../04-libkeyutils1_1.6-6ubuntu1.1_amd64.deb ...
+#9 12.00 Unpacking libkeyutils1:amd64 (1.6-6ubuntu1.1) ...
+#9 12.02 Selecting previously unselected package libkrb5-3:amd64.
+#9 12.02 Preparing to unpack .../05-libkrb5-3_1.17-6ubuntu4.3_amd64.deb ...
+#9 12.02 Unpacking libkrb5-3:amd64 (1.17-6ubuntu4.3) ...
+#9 12.06 Selecting previously unselected package libgssapi-krb5-2:amd64.
+#9 12.06 Preparing to unpack .../06-libgssapi-krb5-2_1.17-6ubuntu4.3_amd64.deb ...
+#9 12.07 Unpacking libgssapi-krb5-2:amd64 (1.17-6ubuntu4.3) ...
+#9 12.09 Selecting previously unselected package libbrotli1:amd64.
+#9 12.09 Preparing to unpack .../07-libbrotli1_1.0.7-6ubuntu0.1_amd64.deb ...
+#9 12.09 Unpacking libbrotli1:amd64 (1.0.7-6ubuntu0.1) ...
+#9 12.13 Selecting previously unselected package libroken18-heimdal:amd64.
+#9 12.13 Preparing to unpack .../08-libroken18-heimdal_7.7.0+dfsg-1ubuntu1.4_amd64.deb ...
+#9 12.13 Unpacking libroken18-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.4) ...
+#9 12.15 Selecting previously unselected package libasn1-8-heimdal:amd64.
+#9 12.15 Preparing to unpack .../09-libasn1-8-heimdal_7.7.0+dfsg-1ubuntu1.4_amd64.deb ...
+#9 12.15 Unpacking libasn1-8-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.4) ...
+#9 12.18 Selecting previously unselected package libheimbase1-heimdal:amd64.
+#9 12.18 Preparing to unpack .../10-libheimbase1-heimdal_7.7.0+dfsg-1ubuntu1.4_amd64.deb ...
+#9 12.18 Unpacking libheimbase1-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.4) ...
+#9 12.20 Selecting previously unselected package libhcrypto4-heimdal:amd64.
+#9 12.20 Preparing to unpack .../11-libhcrypto4-heimdal_7.7.0+dfsg-1ubuntu1.4_amd64.deb ...
+#9 12.20 Unpacking libhcrypto4-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.4) ...
+#9 12.22 Selecting previously unselected package libwind0-heimdal:amd64.
+#9 12.23 Preparing to unpack .../12-libwind0-heimdal_7.7.0+dfsg-1ubuntu1.4_amd64.deb ...
+#9 12.23 Unpacking libwind0-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.4) ...
+#9 12.25 Selecting previously unselected package libhx509-5-heimdal:amd64.
+#9 12.25 Preparing to unpack .../13-libhx509-5-heimdal_7.7.0+dfsg-1ubuntu1.4_amd64.deb ...
+#9 12.25 Unpacking libhx509-5-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.4) ...
+#9 12.27 Selecting previously unselected package libkrb5-26-heimdal:amd64.
+#9 12.27 Preparing to unpack .../14-libkrb5-26-heimdal_7.7.0+dfsg-1ubuntu1.4_amd64.deb ...
+#9 12.27 Unpacking libkrb5-26-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.4) ...
+#9 12.30 Selecting previously unselected package libheimntlm0-heimdal:amd64.
+#9 12.31 Preparing to unpack .../15-libheimntlm0-heimdal_7.7.0+dfsg-1ubuntu1.4_amd64.deb ...
+#9 12.31 Unpacking libheimntlm0-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.4) ...
+#9 12.32 Selecting previously unselected package libgssapi3-heimdal:amd64.
+#9 12.33 Preparing to unpack .../16-libgssapi3-heimdal_7.7.0+dfsg-1ubuntu1.4_amd64.deb ...
+#9 12.33 Unpacking libgssapi3-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.4) ...
+#9 12.35 Selecting previously unselected package libsasl2-modules-db:amd64.
+#9 12.35 Preparing to unpack .../17-libsasl2-modules-db_2.1.27+dfsg-2ubuntu0.1_amd64.deb ...
+#9 12.35 Unpacking libsasl2-modules-db:amd64 (2.1.27+dfsg-2ubuntu0.1) ...
+#9 12.36 Selecting previously unselected package libsasl2-2:amd64.
+#9 12.36 Preparing to unpack .../18-libsasl2-2_2.1.27+dfsg-2ubuntu0.1_amd64.deb ...
+#9 12.37 Unpacking libsasl2-2:amd64 (2.1.27+dfsg-2ubuntu0.1) ...
+#9 12.38 Selecting previously unselected package libldap-common.
+#9 12.38 Preparing to unpack .../19-libldap-common_2.4.49+dfsg-2ubuntu1.9_all.deb ...
+#9 12.39 Unpacking libldap-common (2.4.49+dfsg-2ubuntu1.9) ...
+#9 12.40 Selecting previously unselected package libldap-2.4-2:amd64.
+#9 12.40 Preparing to unpack .../20-libldap-2.4-2_2.4.49+dfsg-2ubuntu1.9_amd64.deb ...
+#9 12.40 Unpacking libldap-2.4-2:amd64 (2.4.49+dfsg-2ubuntu1.9) ...
+#9 12.43 Selecting previously unselected package libnghttp2-14:amd64.
+#9 12.43 Preparing to unpack .../21-libnghttp2-14_1.40.0-1ubuntu0.1_amd64.deb ...
+#9 12.43 Unpacking libnghttp2-14:amd64 (1.40.0-1ubuntu0.1) ...
+#9 12.46 Selecting previously unselected package librtmp1:amd64.
+#9 12.46 Preparing to unpack .../22-librtmp1_2.4+20151223.gitfa8646d.1-2build1_amd64.deb ...
+#9 12.46 Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build1) ...
+#9 12.48 Selecting previously unselected package libssh-4:amd64.
+#9 12.48 Preparing to unpack .../23-libssh-4_0.9.3-2ubuntu2.3_amd64.deb ...
+#9 12.48 Unpacking libssh-4:amd64 (0.9.3-2ubuntu2.3) ...
+#9 12.51 Selecting previously unselected package libcurl4:amd64.
+#9 12.51 Preparing to unpack .../24-libcurl4_7.68.0-1ubuntu2.20_amd64.deb ...
+#9 12.51 Unpacking libcurl4:amd64 (7.68.0-1ubuntu2.20) ...
+#9 12.54 Selecting previously unselected package curl.
+#9 12.54 Preparing to unpack .../25-curl_7.68.0-1ubuntu2.20_amd64.deb ...
+#9 12.54 Unpacking curl (7.68.0-1ubuntu2.20) ...
+#9 12.57 Selecting previously unselected package libsasl2-modules:amd64.
+#9 12.57 Preparing to unpack .../26-libsasl2-modules_2.1.27+dfsg-2ubuntu0.1_amd64.deb ...
+#9 12.57 Unpacking libsasl2-modules:amd64 (2.1.27+dfsg-2ubuntu0.1) ...
+#9 12.59 Setting up libkeyutils1:amd64 (1.6-6ubuntu1.1) ...
+#9 12.60 Setting up libbrotli1:amd64 (1.0.7-6ubuntu0.1) ...
+#9 12.60 Setting up libsqlite3-0:amd64 (3.31.1-4ubuntu0.5) ...
+#9 12.61 Setting up libsasl2-modules:amd64 (2.1.27+dfsg-2ubuntu0.1) ...
+#9 12.61 Setting up libnghttp2-14:amd64 (1.40.0-1ubuntu0.1) ...
+#9 12.62 Setting up krb5-locales (1.17-6ubuntu4.3) ...
+#9 12.62 Setting up libldap-common (2.4.49+dfsg-2ubuntu1.9) ...
+#9 12.63 Setting up libkrb5support0:amd64 (1.17-6ubuntu4.3) ...
+#9 12.63 Setting up libsasl2-modules-db:amd64 (2.1.27+dfsg-2ubuntu0.1) ...
+#9 12.64 Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build1) ...
+#9 12.64 Setting up libk5crypto3:amd64 (1.17-6ubuntu4.3) ...
+#9 12.65 Setting up libsasl2-2:amd64 (2.1.27+dfsg-2ubuntu0.1) ...
+#9 12.65 Setting up libroken18-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.4) ...
+#9 12.66 Setting up libkrb5-3:amd64 (1.17-6ubuntu4.3) ...
+#9 12.66 Setting up libheimbase1-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.4) ...
+#9 12.67 Setting up libasn1-8-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.4) ...
+#9 12.67 Setting up libhcrypto4-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.4) ...
+#9 12.68 Setting up libwind0-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.4) ...
+#9 12.68 Setting up libgssapi-krb5-2:amd64 (1.17-6ubuntu4.3) ...
+#9 12.69 Setting up libssh-4:amd64 (0.9.3-2ubuntu2.3) ...
+#9 12.70 Setting up libhx509-5-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.4) ...
+#9 12.70 Setting up libkrb5-26-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.4) ...
+#9 12.70 Setting up libheimntlm0-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.4) ...
+#9 12.71 Setting up libgssapi3-heimdal:amd64 (7.7.0+dfsg-1ubuntu1.4) ...
+#9 12.71 Setting up libldap-2.4-2:amd64 (2.4.49+dfsg-2ubuntu1.9) ...
+#9 12.72 Setting up libcurl4:amd64 (7.68.0-1ubuntu2.20) ...
+#9 12.72 Setting up curl (7.68.0-1ubuntu2.20) ...
+#9 12.73 Processing triggers for libc-bin (2.31-0ubuntu9.12) ...
+#9 21.45 bin/micromamba
+#9 23.01 Modifying RC file "/root/.bashrc"
+#9 23.01 Generating config for root prefix [1m"/opt/conda"[0m
+#9 23.01 Setting mamba executable to: [1m"/app/bin/micromamba"[0m
+#9 23.01 Adding (or replacing) the following in your "/root/.bashrc" file
+#9 23.01 
+#9 23.01 # >>> mamba initialize >>>
+#9 23.01 # !! Contents within this block are managed by 'mamba init' !!
+#9 23.01 export MAMBA_EXE='/app/bin/micromamba';
+#9 23.01 export MAMBA_ROOT_PREFIX='/opt/conda';
+#9 23.01 __mamba_setup="$("$MAMBA_EXE" shell hook --shell bash --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+#9 23.01 if [ $? -eq 0 ]; then
+#9 23.01     eval "$__mamba_setup"
+#9 23.01 else
+#9 23.01     alias micromamba="$MAMBA_EXE"  # Fallback on help from mamba activate
+#9 23.01 fi
+#9 23.01 unset __mamba_setup
+#9 23.01 # <<< mamba initialize <<<
+#9 23.01 
+#9 DONE 23.0s
+
+#10 [ 6/12] RUN apt update
+#10 0.099 
+#10 0.099 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+#10 0.099 
+#10 0.847 Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease
+#10 0.847 Hit:2 http://security.ubuntu.com/ubuntu focal-security InRelease
+#10 1.077 Hit:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+#10 1.309 Hit:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+#10 1.365 Reading package lists...
+#10 2.217 Building dependency tree...
+#10 2.363 Reading state information...
+#10 2.371 All packages are up to date.
+#10 DONE 2.4s
+
+#11 [ 7/12] RUN ./bin/micromamba clean --all --yes
+#11 0.091 Collect information..
+#11 0.091 Cleaning index cache..
+#11 0.091 Cleaning lock files..
+#11 0.091 Cleaning tarballs..
+#11 0.091 Cleaning packages..
+#11 DONE 0.1s
+
+#12 [ 8/12] RUN ./bin/micromamba create -n geostack -c conda-forge python=3.9
+#12 0.051 warning  libmamba 'root_prefix' set with default value: /root/micromamba
+#12 15.13 
+#12 15.13 Transaction
+#12 15.13 
+#12 15.13   Prefix: /root/micromamba/envs/geostack
+#12 15.13 
+#12 15.13   Updating specs:
+#12 15.13 
+#12 15.13    - python=3.9
+#12 15.13 
+#12 15.13 
+#12 15.13   Package               Version  Build               Channel          Size
+#12 15.13 ────────────────────────────────────────────────────────────────────────────
+#12 15.13   Install:
+#12 15.13 ────────────────────────────────────────────────────────────────────────────
+#12 15.13 
+#12 15.13   + _libgcc_mutex           0.1  conda_forge         conda-forge       3kB
+#12 15.13   + ld_impl_linux-64       2.40  h41732ed_0          conda-forge     705kB
+#12 15.13   + ca-certificates   2023.7.22  hbcca054_0          conda-forge     150kB
+#12 15.13   + libgomp              13.2.0  h807b86a_2          conda-forge     421kB
+#12 15.13   + _openmp_mutex           4.5  2_gnu               conda-forge      24kB
+#12 15.13   + libgcc-ng            13.2.0  h807b86a_2          conda-forge     771kB
+#12 15.13   + openssl               3.1.4  hd590300_0          conda-forge       3MB
+#12 15.13   + libzlib              1.2.13  hd590300_5          conda-forge      62kB
+#12 15.13   + libnsl                2.0.1  hd590300_0          conda-forge      33kB
+#12 15.13   + libffi                3.4.2  h7f98852_5          conda-forge      58kB
+#12 15.13   + bzip2                 1.0.8  h7f98852_4          conda-forge     496kB
+#12 15.13   + ncurses                 6.4  h59595ed_2          conda-forge     884kB
+#12 15.13   + libuuid              2.38.1  h0b41bf4_0          conda-forge      34kB
+#12 15.13   + xz                    5.2.6  h166bdaf_0          conda-forge     418kB
+#12 15.13   + libsqlite            3.44.0  h2797004_0          conda-forge     846kB
+#12 15.13   + tk                   8.6.13  h2797004_0          conda-forge       3MB
+#12 15.13   + readline                8.2  h8228510_1          conda-forge     281kB
+#12 15.13   + tzdata                2023c  h71feb2d_0          conda-forge     118kB
+#12 15.13   + python               3.9.18  h0755675_0_cpython  conda-forge      24MB
+#12 15.13   + wheel                0.41.3  pyhd8ed1ab_0        conda-forge      58kB
+#12 15.13   + setuptools           68.2.2  pyhd8ed1ab_0        conda-forge     464kB
+#12 15.13   + pip                  23.3.1  pyhd8ed1ab_0        conda-forge       1MB
+#12 15.13 
+#12 15.13   Summary:
+#12 15.13 
+#12 15.13   Install: 22 packages
+#12 15.13 
+#12 15.13   Total download: 37MB
+#12 15.13 
+#12 15.13 ────────────────────────────────────────────────────────────────────────────
+#12 15.13 
+#12 15.13 
+#12 15.13 Confirm changes: [Y/n] 
+#12 15.13 Transaction starting
+#12 19.59 Linking _libgcc_mutex-0.1-conda_forge
+#12 19.59 Linking ld_impl_linux-64-2.40-h41732ed_0
+#12 19.59 Linking ca-certificates-2023.7.22-hbcca054_0
+#12 19.59 Linking libgomp-13.2.0-h807b86a_2
+#12 19.59 Linking _openmp_mutex-4.5-2_gnu
+#12 19.60 Linking libgcc-ng-13.2.0-h807b86a_2
+#12 19.60 Linking openssl-3.1.4-hd590300_0
+#12 19.63 Linking libzlib-1.2.13-hd590300_5
+#12 19.63 Linking libnsl-2.0.1-hd590300_0
+#12 19.63 Linking libffi-3.4.2-h7f98852_5
+#12 19.63 Linking bzip2-1.0.8-h7f98852_4
+#12 19.63 Linking ncurses-6.4-h59595ed_2
+#12 21.44 Linking libuuid-2.38.1-h0b41bf4_0
+#12 21.44 Linking xz-5.2.6-h166bdaf_0
+#12 21.45 Linking libsqlite-3.44.0-h2797004_0
+#12 21.45 Linking tk-8.6.13-h2797004_0
+#12 21.49 Linking readline-8.2-h8228510_1
+#12 21.49 Linking tzdata-2023c-h71feb2d_0
+#12 21.52 Linking python-3.9.18-h0755675_0_cpython
+#12 21.73 Linking wheel-0.41.3-pyhd8ed1ab_0
+#12 21.85 Linking setuptools-68.2.2-pyhd8ed1ab_0
+#12 21.87 Linking pip-23.3.1-pyhd8ed1ab_0
+#12 22.13 
+#12 22.13 Transaction finished
+#12 22.13 
+#12 22.13 To activate this environment, use:
+#12 22.13 
+#12 22.13     micromamba activate geostack
+#12 22.13 
+#12 22.13 Or to execute a single command in this environment, use:
+#12 22.13 
+#12 22.13     micromamba run -n geostack mycommand
+#12 22.13 
+#12 DONE 22.2s
+
+#13 [ 9/12] RUN ./bin/micromamba install -n geostack -c conda-forge numpy pocl
+#13 0.062 warning  libmamba 'root_prefix' set with default value: /root/micromamba
+#13 0.064 conda-forge/linux-64                                        Using cache
+#13 0.064 conda-forge/noarch                                          Using cache
+#13 1.318 
+#13 1.318 Pinned packages:
+#13 1.318   - python 3.9.*
+#13 1.318 
+#13 1.847 
+#13 1.847 Transaction
+#13 1.847 
+#13 1.847   Prefix: /root/micromamba/envs/geostack
+#13 1.847 
+#13 1.847   Updating specs:
+#13 1.847 
+#13 1.847    - numpy
+#13 1.847    - pocl
+#13 1.847 
+#13 1.847 
+#13 1.849   Package             Version  Build                Channel          Size
+#13 1.849 ───────────────────────────────────────────────────────────────────────────
+#13 1.849   Install:
+#13 1.849 ───────────────────────────────────────────────────────────────────────────
+#13 1.849 
+#13 1.849   + ocl-icd             2.3.1  h7f98852_0           conda-forge     121kB
+#13 1.849   + libstdcxx-ng       13.2.0  h7e041cc_2           conda-forge       4MB
+#13 1.849   + python_abi            3.9  4_cp39               conda-forge       6kB
+#13 1.849   + libgfortran5       13.2.0  ha4646dd_2           conda-forge       1MB
+#13 1.849   + libiconv             1.17  h166bdaf_0           conda-forge       1MB
+#13 1.849   + icu                  73.2  h59595ed_0           conda-forge      12MB
+#13 1.849   + zstd                1.5.5  hfc55251_0           conda-forge     545kB
+#13 1.849   + libgfortran-ng     13.2.0  h69a702a_2           conda-forge      24kB
+#13 1.849   + libxml2            2.11.5  h232c23b_1           conda-forge     706kB
+#13 1.849   + libopenblas        0.3.24  pthreads_h413a1c8_0  conda-forge       5MB
+#13 1.849   + libllvm15          15.0.7  h5cf9203_3           conda-forge      33MB
+#13 1.849   + libhwloc          1.11.13  h8b7812e_2           conda-forge       2MB
+#13 1.849   + libblas             3.9.0  19_linux64_openblas  conda-forge      15kB
+#13 1.849   + libclang-cpp15     15.0.7  default_h7634d5b_3   conda-forge      17MB
+#13 1.849   + libllvmspirv15     15.0.0  h0cdce71_1           conda-forge       1MB
+#13 1.849   + libcblas            3.9.0  19_linux64_openblas  conda-forge      14kB
+#13 1.849   + liblapack           3.9.0  19_linux64_openblas  conda-forge      14kB
+#13 1.849   + llvm-spirv-15      15.0.0  h0cdce71_1           conda-forge      50kB
+#13 1.849   + numpy              1.26.0  py39h474f0d3_0       conda-forge       7MB
+#13 1.849   + pocl-core             4.0  hb452e98_2           conda-forge     563kB
+#13 1.849   + pocl-cuda             4.0  hb452e98_2           conda-forge     894kB
+#13 1.849   + pocl-cpu-minimal      4.0  hf9ad923_2           conda-forge      15MB
+#13 1.849   + pocl-cpu              4.0  h55a2082_2           conda-forge      25kB
+#13 1.849   + pocl                  4.0  h03a6ac1_2           conda-forge      14kB
+#13 1.849 
+#13 1.849   Summary:
+#13 1.849 
+#13 1.849   Install: 24 packages
+#13 1.849 
+#13 1.849   Total download: 102MB
+#13 1.849 
+#13 1.849 ───────────────────────────────────────────────────────────────────────────
+#13 1.849 
+#13 1.849 
+#13 1.849 Confirm changes: [Y/n] 
+#13 1.850 Transaction starting
+#13 10.83 Linking ocl-icd-2.3.1-h7f98852_0
+#13 10.83 Linking libstdcxx-ng-13.2.0-h7e041cc_2
+#13 10.84 Linking python_abi-3.9-4_cp39
+#13 10.84 Linking libgfortran5-13.2.0-ha4646dd_2
+#13 10.84 Linking libiconv-1.17-h166bdaf_0
+#13 10.84 Linking icu-73.2-h59595ed_0
+#13 10.86 Linking zstd-1.5.5-hfc55251_0
+#13 10.86 Linking libgfortran-ng-13.2.0-h69a702a_2
+#13 10.86 Linking libxml2-2.11.5-h232c23b_1
+#13 10.87 Linking libopenblas-0.3.24-pthreads_h413a1c8_0
+#13 10.87 Linking libllvm15-15.0.7-h5cf9203_3
+#13 10.87 Linking libhwloc-1.11.13-h8b7812e_2
+#13 10.90 Linking libblas-3.9.0-19_linux64_openblas
+#13 11.06 Linking libclang-cpp15-15.0.7-default_h7634d5b_3
+#13 11.06 Linking libllvmspirv15-15.0.0-h0cdce71_1
+#13 11.09 Linking libcblas-3.9.0-19_linux64_openblas
+#13 11.25 Linking liblapack-3.9.0-19_linux64_openblas
+#13 11.42 Linking llvm-spirv-15-15.0.0-h0cdce71_1
+#13 11.42 Linking numpy-1.26.0-py39h474f0d3_0
+#13 11.51 Linking pocl-core-4.0-hb452e98_2
+#13 11.51 Linking pocl-cuda-4.0-hb452e98_2
+#13 11.52 Linking pocl-cpu-minimal-4.0-hf9ad923_2
+#13 11.52 Linking pocl-cpu-4.0-h55a2082_2
+#13 11.52 Linking pocl-4.0-h03a6ac1_2
+#13 11.52 
+#13 11.52 Transaction finished
+#13 11.52 
+#13 11.52 To activate this environment, use:
+#13 11.52 
+#13 11.52     micromamba activate geostack
+#13 11.52 
+#13 11.52 Or to execute a single command in this environment, use:
+#13 11.52 
+#13 11.52     micromamba run -n geostack mycommand
+#13 11.52 
+#13 DONE 11.6s
+
+#14 [10/12] RUN ./bin/micromamba install -n geostack -c geostack geostack
+#14 0.058 warning  libmamba 'root_prefix' set with default value: /root/micromamba
+#14 1.668 
+#14 1.668 Pinned packages:
+#14 1.668   - python 3.9.*
+#14 1.668 
+#14 1.668 
+#14 1.668 Transaction
+#14 1.668 
+#14 1.668   Prefix: /root/micromamba/envs/geostack
+#14 1.668 
+#14 1.668   Updating specs:
+#14 1.668 
+#14 1.668    - geostack
+#14 1.668 
+#14 1.668 
+#14 1.669   Package     Version  Build           Channel      Size
+#14 1.669 ──────────────────────────────────────────────────────────
+#14 1.669   Install:
+#14 1.669 ──────────────────────────────────────────────────────────
+#14 1.669 
+#14 1.669   + geostack    0.4.4  py39hef51801_1  geostack      5MB
+#14 1.669 
+#14 1.669   Summary:
+#14 1.669 
+#14 1.669   Install: 1 packages
+#14 1.669 
+#14 1.669   Total download: 5MB
+#14 1.669 
+#14 1.669 ──────────────────────────────────────────────────────────
+#14 1.669 
+#14 1.669 
+#14 1.669 Confirm changes: [Y/n] 
+#14 1.669 Transaction starting
+#14 3.512 Linking geostack-0.4.4-py39hef51801_1
+#14 3.538 
+#14 3.538 Transaction finished
+#14 3.538 
+#14 3.538 To activate this environment, use:
+#14 3.538 
+#14 3.538     micromamba activate geostack
+#14 3.538 
+#14 3.538 Or to execute a single command in this environment, use:
+#14 3.538 
+#14 3.538     micromamba run -n geostack mycommand
+#14 3.538 
+#14 DONE 3.6s
+
+#15 [11/12] COPY run.py .
+#15 DONE 0.0s
+
+#16 [12/12] RUN /root/micromamba/envs/geostack/bin/python run.py
+#16 1.693 Geostack is loaded!
+#16 1.693 <class 'geostack.vector.Vector'>
+#16 1.693 Geometry:
+#16 1.693     Points    :   1
+#16 1.693     LineString:   0
+#16 1.693     Polygon   :   2
+#16 1.693 Bounding Box:
+#16 1.693     lower bound:   [0.0, 0.0, 0.0, 0.0]
+#16 1.693     upper bound:   [2.0, 1.5, 0.0, 0.0]
+#16 1.693 Projection Parameters:
+#16 1.693     type  :  0
+#16 1.693     cttype:  0
+#16 1.693     a     :  0.0
+#16 1.693     f     :  0.0
+#16 1.693     x0    :  0.0
+#16 1.693     k0    :  0.0
+#16 1.693     fe    :  0.0
+#16 1.693     fn    :  0.0
+#16 1.693     phi_0 :  0.0
+#16 1.693     phi_1 :  0.0
+#16 1.693     phi_2 :  0.0
+#16 1.693 <class 'geostack.vector.Vector'>
+#16 1.693 Geometry:
+#16 1.693     Points    :   2
+#16 1.693     LineString:   1
+#16 1.693     Polygon   :   2
+#16 1.693 Bounding Box:
+#16 1.693     lower bound:   [0.0, 0.0, 0.0, 0.0]
+#16 1.693     upper bound:   [3.0, 1.5, 0.0, 0.0]
+#16 1.693 Projection Parameters:
+#16 1.693     type  :  0
+#16 1.693     cttype:  0
+#16 1.693     a     :  0.0
+#16 1.693     f     :  0.0
+#16 1.693     x0    :  0.0
+#16 1.693     k0    :  0.0
+#16 1.693     fe    :  0.0
+#16 1.693     fn    :  0.0
+#16 1.693     phi_0 :  0.0
+#16 1.693     phi_1 :  0.0
+#16 1.693     phi_2 :  0.0
+#16 DONE 1.7s
+
+#17 exporting to image
+#17 exporting layers
+#17 exporting layers 2.9s done
+#17 writing image sha256:9ef5ed58ce2a156318a54a8ca4215f434553274fc6746d01676e3d2181d16ae4 done
+#17 naming to docker.io/library/gs_pocl done
+#17 DONE 2.9s
